@@ -1,4 +1,4 @@
-﻿{
+{
   "tracker_broadcast": {
     "type": "array",
     "orientation": "vertical",
@@ -15,11 +15,11 @@
             "h_alignment": "left",
             "item_size": 48,
             "rows": [
-              [ "kraid", "charge", "varia", "morph" ],
-              [ "phantoon", "ice", "gravity", "bomb" ],
-              [ "draygon", "wave", "hijump", "spring" ],
-              [ "ridley", "spazer", "space", "screw" ],
-              [ "", "plasma", "speed", "" ]
+              [ "kraid", "charge", "heatshield", "morph", "hijump" ],
+              [ "phantoon", "ice", "varia", "bomb", "doublejump" ],
+              [ "draygon", "wave", "pressurevalve", "spring", "space" ],
+              [ "ridley", "spazer", "gravity", "screw", "speed" ],
+              [ "", "plasma", "xray", "grapple", "" ]
             ]
           }
         ]
