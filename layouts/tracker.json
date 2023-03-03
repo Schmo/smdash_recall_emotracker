@@ -1,4 +1,4 @@
-﻿{
+{
   "shared_item_grid": {
     "type": "array",
     "orientation": "vertical",
@@ -14,11 +14,11 @@
             "item_margin": "6,1",
             "h_alignment": "left",
             "rows": [
-              [ "kraid", "charge", "varia", "morph", "hijump" ],
-              [ "phantoon", "ice", "gravity", "bomb", "space" ],
-              [ "draygon", "wave", "", "spring", "speed" ],
-              [ "ridley", "spazer", "grapple", "screw", "" ],
-              [ "", "plasma", "xray", "", "" ]
+              [ "kraid", "charge", "heatshield", "morph", "hijump" ],
+              [ "phantoon", "ice", "varia", "bomb", "doublejump" ],
+              [ "draygon", "wave", "pressurevalve", "spring", "space" ],
+              [ "ridley", "spazer", "gravity", "screw", "speed" ],
+              [ "", "plasma", "xray", "grapple", "" ]
             ]
           },
           {
@@ -60,9 +60,9 @@
       "rows": [
         [ "charge", "varia", "morph", "hijump", "missile_icon" ],
         [ "ice", "gravity", "bomb", "space", "supermissile_icon" ],
-        [ "wave", "", "spring", "speed", "powerbomb_icon" ],
-        [ "spazer", "grapple", "screw", "", "etank_icon" ],
-        [ "plasma", "xray", "", "", "reservetank_icon" ]
+        [ "wave", "chargeupgrade_icon", "spring", "speed", "powerbomb_icon" ],
+        [ "spazer", "grapple", "screw", "pressurevalve", "etank_icon" ],
+        [ "plasma", "xray", "heatshield", "doublejump", "reservetank_icon" ]
       ]
     }
   },
