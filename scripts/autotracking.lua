@@ -1,5 +1,5 @@
 -- Configuration --------------------------------------
-AUTOTRACKER_ENABLE_DEBUG_LOGGING = false
+AUTOTRACKER_ENABLE_DEBUG_LOGGING = true
 -------------------------------------------------------
 
 print("")
@@ -110,6 +110,12 @@ function updateAmmoFrom2Bytes(segment, code, address)
             else
                 item.AcquiredCount = value/100
             end
+        elseif code == "chargeupgrade" then
+            if item.AcquiredCount > 0 then
+                item.AcquiredCount = item.AcquiredCount + 1
+            else
+                item.AcquiredCount = value/16
+            end
         else
             item.AcquiredCount = value
         end
@@ -172,7 +178,23 @@ function updateItems(segment)
         updateToggleItemFromByteAndFlag(segment, "ice", address + 0x06, 0x02)
         updateToggleItemFromByteAndFlag(segment, "spazer", address + 0x06, 0x04)
         updateToggleItemFromByteAndFlag(segment, "plasma", address + 0x06, 0x08)
-        updateToggleItemFromByteAndFlag(segment, "charge", address + 0x07, 0x10)
+        updateAmmoFrom2Bytes(segment, "chargeupgrade", 0x7e09a2 + 0x07, 0x10)
+    end
+    return true
+end
+
+function updateDashItems(segment)
+    if not isInGame() then
+        return false
+    end
+    if AUTOTRACKER_ENABLE_ITEM_TRACKING then
+        InvalidateReadCaches()
+        local dashAddress = 0x7e09ec
+
+        updateToggleItemFromByteAndFlag(segment, "heatshield", 0x7e09ec, 0x01)
+        updateToggleItemFromByteAndFlag(segment, "pressurevalve", 0x7e09ec, 0x20)
+        updateToggleItemFromByteAndFlag(segment, "doublejump", 0x7e09ed, 0x02)
+
     end
     return true
 end
@@ -190,6 +212,7 @@ function updateAmmo(segment)
         updateAmmoFrom2Bytes(segment, "super", address + 0x0a)
         updateAmmoFrom2Bytes(segment, "pb", address + 0x0e)
         updateAmmoFrom2Bytes(segment, "reservetank", address + 0x12)
+        
     end
     return true
 end
@@ -340,6 +363,7 @@ end
 -- *************************** Setup memory watches
 
 ScriptHost:AddMemoryWatch("SM Item Data", 0x7e09a0, 0x10, updateItems)
+ScriptHost:AddMemoryWatch("SM Dash Item Data", 0x7e09ec, 0x20, updateDashItems)
 ScriptHost:AddMemoryWatch("SM Ammo Data", 0x7e09c2, 0x16, updateAmmo)
 ScriptHost:AddMemoryWatch("SM Boss Data", 0x7ed828, 0x08, updateBosses)
 ScriptHost:AddMemoryWatch("SM Room Data", 0x7ed870, 0x20, updateRooms)

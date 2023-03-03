@@ -1,9 +1,9 @@
 ﻿{
-  "name": "Super Metroid DASH Randomizer Map Tracker",
-  "game_name": "Super Metroid Randomizer",
-  "game_variant": "DASH Randomizer v9",
+  "name": "Super Metroid DASH - Recall Randomizer Item Tracker",
+  "game_name": "Super Metroid DASH Randomizer",
+  "game_variant": "DASH Recall Randomizer v1",
   "platform": "snes",
-  "package_version": "1.0.2",
-  "package_uid": "smdash_dorkmasterflek",
-  "author": "Dorkmaster Flek"
+  "package_version": "1.0.0",
+  "package_uid": "smdash_recall_papaschmo",
+  "author": "PapaSchmo"
 }

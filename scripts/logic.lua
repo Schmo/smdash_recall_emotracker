@@ -65,6 +65,14 @@ function hasVaria()
     return 0
 end
 
+function hasPressureValve()
+    local pressureValve = Tracker:ProviderCountForCode("pressurevalve")
+    if pressureValve >= 1 then
+        return 1
+    end
+    return 0
+end
+
 function hasGravity()
     local gravity = Tracker:ProviderCountForCode("gravity")
     if gravity >= 1 then

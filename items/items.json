@@ -1,6 +1,6 @@
 [
   {
-    "name": "Charge Upgrade Capacity",
+    "name": "Charge Upgrades",
     "type": "consumable",
     "img": "images/charge.png",
     "max_quantity": 4,
