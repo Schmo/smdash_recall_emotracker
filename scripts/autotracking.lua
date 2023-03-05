@@ -111,11 +111,7 @@ function updateAmmoFrom2Bytes(segment, code, address)
                 item.AcquiredCount = value/100
             end
         elseif code == "chargeupgrade" then
-            if item.AcquiredCount > 0 then
-                item.AcquiredCount = item.AcquiredCount + 1
-            else
-                item.AcquiredCount = value/16
-            end
+            item.AcquiredCount = value + 1
         else
             item.AcquiredCount = value
         end
@@ -178,7 +174,7 @@ function updateItems(segment)
         updateToggleItemFromByteAndFlag(segment, "ice", address + 0x06, 0x02)
         updateToggleItemFromByteAndFlag(segment, "spazer", address + 0x06, 0x04)
         updateToggleItemFromByteAndFlag(segment, "plasma", address + 0x06, 0x08)
-        updateAmmoFrom2Bytes(segment, "chargeupgrade", 0x7e09a2 + 0x07, 0x10)
+        
     end
     return true
 end
@@ -194,6 +190,7 @@ function updateDashItems(segment)
         updateToggleItemFromByteAndFlag(segment, "heatshield", 0x7e09ec, 0x01)
         updateToggleItemFromByteAndFlag(segment, "pressurevalve", 0x7e09ec, 0x20)
         updateToggleItemFromByteAndFlag(segment, "doublejump", 0x7e09ed, 0x02)
+        updateAmmoFrom2Bytes(segment, "chargeupgrade", 0x7e0a00, 0x10)
 
     end
     return true
@@ -362,7 +359,7 @@ end
 
 -- *************************** Setup memory watches
 
-ScriptHost:AddMemoryWatch("SM Item Data", 0x7e09a0, 0x10, updateItems)
+ScriptHost:AddMemoryWatch("SM Item Data", 0x7e09a0, 0x20, updateItems)
 ScriptHost:AddMemoryWatch("SM Dash Item Data", 0x7e09ec, 0x20, updateDashItems)
 ScriptHost:AddMemoryWatch("SM Ammo Data", 0x7e09c2, 0x16, updateAmmo)
 ScriptHost:AddMemoryWatch("SM Boss Data", 0x7ed828, 0x08, updateBosses)
