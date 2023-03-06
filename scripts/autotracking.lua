@@ -1,5 +1,5 @@
 -- Configuration --------------------------------------
-AUTOTRACKER_ENABLE_DEBUG_LOGGING = true
+AUTOTRACKER_ENABLE_DEBUG_LOGGING = false
 -------------------------------------------------------
 
 print("")
@@ -13,6 +13,7 @@ end
 print("---------------------------------------------------------------------")
 print("")
 
+--Variable used for communicating between the charge beam item and the charge upgrade count.
 hasChargeBeam = false
 
 U8_READ_CACHE = 0
@@ -96,6 +97,7 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
 end
 
 function updateAmmoFrom2Bytes(segment, code, address)
+	print("starting ammo function")
     local item = Tracker:FindObjectForCode(code)
     local value = ReadU16(segment, address)
 
@@ -113,11 +115,15 @@ function updateAmmoFrom2Bytes(segment, code, address)
                 item.AcquiredCount = value/100
             end
         elseif code == "chargeupgrade" then
+			if hasChargeBeam then
                 item.AcquiredCount = value + 1
-            end
+			else
+				item.AcquiredCount = 0
+			end
         else
             item.AcquiredCount = value
         end
+		
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
             print("Ammo:", item.Name, string.format("0x%x", address), value, item.AcquiredCount)
         end
@@ -127,6 +133,7 @@ function updateAmmoFrom2Bytes(segment, code, address)
 end
 
 function updateToggleItemFromByteAndFlag(segment, code, address, flag)
+	print("starting item function")
     local item = Tracker:FindObjectForCode(code)
     if item then
         local value = ReadU8(segment, address)
@@ -137,12 +144,17 @@ function updateToggleItemFromByteAndFlag(segment, code, address, flag)
             print("Item:", item.Name, string.format("0x%x", address), string.format("0x%x", value),
                     string.format("0x%x", flag), flagTest ~= 0)
         end
-        if code == "chargebeam" and flagTest ~= 0 then
-            updateAmmoFrom2Bytes(segment, "chargeupgrade", 0x7e0a00, 0x10)
-        end
-        if flagTest ~= 0 and code ~= "chargebeam" then
+		--If the first charge upgrade has been collected.
+        if code == "chargebeam" then
+			--Reset the variable so we can have the correct status upon a death.
+			hasChargeBeam = false
+			if flagTest ~= 0 then
+			    hasChargeBeam = true
+				print("Inside chargebeam is collected == true: ", flagTest)
+			end
+        elseif flagTest ~= 0 then
             item.Active = true
-        else
+        else 
             item.Active = false
         end
     elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -179,24 +191,11 @@ function updateItems(segment)
         updateToggleItemFromByteAndFlag(segment, "spazer", address + 0x06, 0x04)
         updateToggleItemFromByteAndFlag(segment, "plasma", address + 0x06, 0x08)
         updateToggleItemFromByteAndFlag(segment, "chargebeam", 0x7e09a2 + 0x07, 0x10)
-        
-    end
-    return true
-end
-
-function updateDashItems(segment)
-    if not isInGame() then
-        return false
-    end
-    if AUTOTRACKER_ENABLE_ITEM_TRACKING then
-        InvalidateReadCaches()
-        local dashAddress = 0x7e09ec
-
-        updateToggleItemFromByteAndFlag(segment, "heatshield", 0x7e09ec, 0x01)
+		updateToggleItemFromByteAndFlag(segment, "heatshield", 0x7e09ec, 0x01)
         updateToggleItemFromByteAndFlag(segment, "pressurevalve", 0x7e09ec, 0x20)
         updateToggleItemFromByteAndFlag(segment, "doublejump", 0x7e09ed, 0x02)
         updateAmmoFrom2Bytes(segment, "chargeupgrade", 0x7e0a00, 0x10)
-
+        
     end
     return true
 end
@@ -363,9 +362,7 @@ end
 
 
 -- *************************** Setup memory watches
-
-ScriptHost:AddMemoryWatch("SM Item Data", 0x7e09a0, 0x20, updateItems)
-ScriptHost:AddMemoryWatch("SM Dash Item Data", 0x7e09ec, 0x20, updateDashItems)
+ScriptHost:AddMemoryWatch("SM Item Data", 0x7e09a0, 0x70, updateItems)
 ScriptHost:AddMemoryWatch("SM Ammo Data", 0x7e09c2, 0x16, updateAmmo)
 ScriptHost:AddMemoryWatch("SM Boss Data", 0x7ed828, 0x08, updateBosses)
 ScriptHost:AddMemoryWatch("SM Room Data", 0x7ed870, 0x20, updateRooms)
