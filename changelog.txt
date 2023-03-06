@@ -1,11 +1,3 @@
-1.0.2
------
-Added missing room on Brinstar map
-
-1.0.1
------
-Fixed pink Brinstar missile locations on Brinstar zone map
-
 1.0.0
 -----
 Initial release
