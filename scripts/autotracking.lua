@@ -13,6 +13,8 @@ end
 print("---------------------------------------------------------------------")
 print("")
 
+hasChargeBeam = false
+
 U8_READ_CACHE = 0
 U8_READ_CACHE_ADDRESS = 0
 
@@ -111,11 +113,11 @@ function updateAmmoFrom2Bytes(segment, code, address)
                 item.AcquiredCount = value/100
             end
         elseif code == "chargeupgrade" then
-            item.AcquiredCount = value + 1
+                item.AcquiredCount = value + 1
+            end
         else
             item.AcquiredCount = value
         end
-
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
             print("Ammo:", item.Name, string.format("0x%x", address), value, item.AcquiredCount)
         end
@@ -135,8 +137,10 @@ function updateToggleItemFromByteAndFlag(segment, code, address, flag)
             print("Item:", item.Name, string.format("0x%x", address), string.format("0x%x", value),
                     string.format("0x%x", flag), flagTest ~= 0)
         end
-
-        if flagTest ~= 0 then
+        if code == "chargebeam" and flagTest ~= 0 then
+            updateAmmoFrom2Bytes(segment, "chargeupgrade", 0x7e0a00, 0x10)
+        end
+        if flagTest ~= 0 and code ~= "chargebeam" then
             item.Active = true
         else
             item.Active = false
@@ -174,6 +178,7 @@ function updateItems(segment)
         updateToggleItemFromByteAndFlag(segment, "ice", address + 0x06, 0x02)
         updateToggleItemFromByteAndFlag(segment, "spazer", address + 0x06, 0x04)
         updateToggleItemFromByteAndFlag(segment, "plasma", address + 0x06, 0x08)
+        updateToggleItemFromByteAndFlag(segment, "chargebeam", 0x7e09a2 + 0x07, 0x10)
         
     end
     return true
