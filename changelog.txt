@@ -1,3 +1,0 @@
-1.0.0
------
-Initial release - Includes item tracker and autotracking. Map tracking next on the list :)
