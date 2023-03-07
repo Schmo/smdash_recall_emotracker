@@ -6,7 +6,7 @@
       "author": "PapaSchmo",
       "game_name": "Super Metroid",
       "version": "1.0.0",
-      "flags": ["autotracker"],
+      "flags": ["pins", "autotracker"],
       "uid": "smdash_recall_papaschmo",
       "link": "https://github.com/Schmo/smdash_recall_emotracker/raw/Package/SuperMetroidRandomizer_DASH_Recall_ItemTracker.zip"
     }
