@@ -17,7 +17,7 @@
       "version": "1.0.1",
       "flags": [ "autotracker" ],
       "uid": "sm_itemsonly_papaschmo",
-      "link": "https://github.com/Schmo/smdash_recall_emotracker/raw/Package/SuperMetroidRandomizer_ItemsOnly_Tracker.zip"
+      "link": "https://github.com/Schmo/smdash_recall_emotracker/raw/Package/SuperMetroidRandomizer_ItemsOnly_Tracker.zip",
       "variants": [
         {
           "name": "Standard",
