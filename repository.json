@@ -18,6 +18,30 @@
       "flags": [ "autotracker" ],
       "uid": "sm_itemsonly_papaschmo",
       "link": "https://github.com/Schmo/smdash_recall_emotracker/raw/Package/SuperMetroidRandomizer_ItemsOnly_Tracker.zip"
+      "variants": [
+        "Standard": {
+          "name": "Standard",
+          "flags": [ "autotracker" ]
+        },
+        "Recall": {
+          "name": "DASH Recall",
+          "flags": [ "autotracker" ]
+        },
+        "Chozo": {
+          "name": "Chozo"
+        },
+        "Standard_Bosses_Off": {
+          "name": "Standard (Bosses Off by Default)",
+          "flags": [ "autotracker" ]
+        },
+        "Recall_Bosses_Off": {
+          "name": "DASH Recall (Bosses Off by Default)",
+          "flags": [ "autotracker" ]
+        },
+        "Chozo_Bosses_Off": {
+          "name": "Chozo (Bosses Off by Default)"
+        }
+      ]
     }
   ]
 }
