@@ -1,0 +1,27 @@
+{
+  "shared_item_grid": {
+    "type": "itemgrid",
+    "h_alignment": "center",
+    "item_margin": "4,3",
+    "width": 218,
+    "rows": [
+      [ "kraid", "chargebeam", "varia", "morph", "hijump" ],
+      [ "phantoon", "ice", "gravity", "bomb", "space" ],
+      [ "draygon", "wave", "screw", "spring", "speed" ],
+      [ "ridley", "spazer", "powerbomb_icon", "supermissile", "missile" ],
+      [ "xray", "plasma", "grapple", "etank", "reservetank" ]
+    ]
+  },
+  "tracker_default": {
+    "type": "container",
+    "background": "#000000",
+    "h_alignment": "left",
+    "width": 218,
+    "content": {
+      "type": "layout",
+      "dropshadow": false,
+      "margin": 1,
+      "key": "shared_item_grid"
+    }
+  }
+}

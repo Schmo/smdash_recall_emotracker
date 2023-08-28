@@ -1,24 +1,10 @@
 [
   {
-    "name": "Charge Upgrades",
-    "type": "consumable",
-    "img": "images/charge.png",
-    "max_quantity": 4,
-    "increment": 1,
-    "codes": "chargeupgrade,charge"
-  },
-  {
-    "name": "Charge Upgrade (capturable)",
-    "type": "toggle",
-    "img": "images/charge.png",
-    "codes": "chargeupgrade_icon"
-  },
-  {
     "name": "Charge Beam",
     "type": "toggle",
     "loop": "true",
     "img": "images/charge.png",
-    "codes": "chargebeam"
+    "codes": "charge, chargebeam"
   },
   {
     "name": "Wave Beam",
@@ -49,25 +35,11 @@
     "codes": "spazer"
   },
   {
-    "name": "Heat Shield",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/heatshield.png",
-    "codes": "heatshield"
-  },
-  {
     "name": "Varia Suit",
     "type": "toggle",
     "loop": "true",
     "img": "images/varia.png",
     "codes": "varia"
-  },
-  {
-    "name": "Pressure Valve",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/pressurevalve.png",
-    "codes": "pressurevalve"
   },
   {
     "name": "Gravity Suit",
@@ -112,13 +84,6 @@
     "codes": "space"
   },
   {
-    "name": "Double Jump",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/doublejump.png",
-    "codes": "doublejump"
-  },
-  {
     "name": "Speed Booster",
     "type": "toggle",
     "loop": "true",
@@ -150,28 +115,28 @@
     "name": "Ridley",
     "type": "toggle",
     "loop": "true",
-    "img": "images/Boss1_DASH.png",
+    "img": "images/Boss1.png",
     "codes": "ridley,g4"
   },
   {
     "name": "Kraid",
     "type": "toggle",
     "loop": "true",
-    "img": "images/Boss2_DASH.png",
+    "img": "images/Boss2.png",
     "codes": "kraid,g4"
   },
   {
     "name": "Phantoon",
     "type": "toggle",
     "loop": "true",
-    "img": "images/Boss3_DASH.png",
+    "img": "images/Boss3.png",
     "codes": "phantoon,g4"
   },
   {
     "name": "Draygon",
     "type": "toggle",
     "loop": "true",
-    "img": "images/Boss4_DASH.png",
+    "img": "images/Boss4.png",
     "codes": "draygon,g4"
   },
   {

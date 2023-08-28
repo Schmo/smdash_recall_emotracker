@@ -150,35 +150,35 @@
     "name": "Ridley",
     "type": "toggle",
     "loop": "true",
-    "img": "images/Boss1_DASH.png",
+    "img": "images/Boss1.png",
     "codes": "ridley,g4"
   },
   {
     "name": "Kraid",
     "type": "toggle",
     "loop": "true",
-    "img": "images/Boss2_DASH.png",
+    "img": "images/Boss2.png",
     "codes": "kraid,g4"
   },
   {
     "name": "Phantoon",
     "type": "toggle",
     "loop": "true",
-    "img": "images/Boss3_DASH.png",
+    "img": "images/Boss3.png",
     "codes": "phantoon,g4"
   },
   {
     "name": "Draygon",
     "type": "toggle",
     "loop": "true",
-    "img": "images/Boss4_DASH.png",
+    "img": "images/Boss4.png",
     "codes": "draygon,g4"
   },
   {
     "name": "Etanks",
     "type": "consumable",
     "img": "images/etank.png",
-    "max_quantity": 14,
+    "max_quantity": 3,
     "codes": "etank,alltanks"
   },
   {
@@ -191,7 +191,7 @@
     "name": "Reserve Tanks",
     "type": "consumable",
     "img": "images/reservetank.png",
-    "max_quantity": 4,
+    "max_quantity": 1,
     "codes": "reservetank,alltanks"
   },
   {
@@ -204,8 +204,8 @@
     "name": "Missile Capacity",
     "type": "consumable",
     "img": "images/missile.png",
-    "max_quantity": 255,
-    "increment": 5,
+    "max_quantity": 2,
+    "increment": 1,
     "codes": "missile"
   },
   {
@@ -218,8 +218,8 @@
     "name": "Super Missile Capacity",
     "type": "consumable",
     "img": "images/super.png",
-    "max_quantity": 100,
-    "increment": 5,
+    "max_quantity": 2,
+    "increment": 1,
     "codes": "supermissile,super"
   },
   {
@@ -232,8 +232,8 @@
     "name": "Power Bomb Capacity",
     "type": "consumable",
     "img": "images/powerbomb.png",
-    "max_quantity": 100,
-    "increment": 5,
+    "max_quantity": 1,
+    "increment": 1,
     "codes": "powerbomb,pb"
   },
   {
