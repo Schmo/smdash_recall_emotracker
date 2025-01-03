@@ -1,0 +1,29 @@
+{
+  "shared_item_grid": {
+    "type": "itemgrid",
+    "h_alignment": "center",
+    "item_margin": "4,3",
+    "width": 218,
+    "rows": [
+      [ "kraid", "charge", "heatshield", "morph", "hijump" ],
+      [ "phantoon", "ice", "varia", "bomb", "doublejump" ],
+      [ "draygon", "wave", "pressurevalve", "spring", "space" ],
+      [ "ridley", "spazer", "gravity", "screw", "speed" ],
+      [ "", "plasma", "xray", "grapple", "" ],
+      [ "missile_chozo", "supermissile_chozo", "powerbomb_chozo", "etank_chozo", "reservetank_chozo" ],
+      [ "missile", "supermissile", "powerbomb", "etank", "reservetank" ]
+    ]
+  },
+  "tracker_default": {
+    "type": "container",
+    "background": "#000000",
+    "h_alignment": "left",
+    "width": 218,
+    "content": {
+      "type": "layout",
+      "dropshadow": false,
+      "margin": 1,
+      "key": "shared_item_grid"
+    }
+  }
+}

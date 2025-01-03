@@ -9,7 +9,8 @@
       [ "phantoon", "ice", "gravity", "bomb", "space" ],
       [ "draygon", "wave", "screw", "spring", "speed" ],
       [ "ridley", "spazer", "grapple", "etank_chozo", "reservetank_chozo" ],
-      [ "xray", "plasma", "missile_chozo", "supermissile_chozo", "powerbomb_icon_chozo"]
+      [ "xray", "plasma", "missile_chozo", "supermissile_chozo", "powerbomb_icon_chozo"],
+      [ "missile", "supermissile", "powerbomb", "etank", "reservetank"]
     ]
   },
   "tracker_default": {

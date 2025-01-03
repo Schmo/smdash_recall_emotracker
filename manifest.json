@@ -2,27 +2,58 @@
   "name": "Super Metroid Randomizer - Items Only",
   "game_name": "Super Metroid",
   "platform": "snes",
-  "package_version": "1.0.2",
+  "package_version": "1.0.3",
   "package_uid": "sm_itemsonly_papaschmo",
   "author": "PapaSchmo",
   "variants": {
     "Standard": {
       "display_name": "Standard"
     },
-    "Recall": {
-      "display_name": "DASH Recall"
+    "Standard_With_Consumables": {
+      "display_name": "Standard + Ammo & Tanks"
     },
     "Chozo": {
       "display_name": "Chozo"
     },
-    "Standard_Bosses_Off": {
-      "display_name": "Standard (Bosses Off by Default)"
+    "Chozo_With_Consumables": {
+      "display_name": "Chozo + Ammo & Tanks"
     },
-    "Recall_Bosses_Off": {
-      "display_name": "DASH Recall (Bosses Off by Default)"
+    "With_Dash_Items": {
+      "display_name": "Dash Items"
+    },
+    "With_Dash_Items_And_Consumables": {
+      "display_name": "Dash Items + Ammo & Tanks"
+    },
+    "With_Dash_Items_And_Chozo": {
+      "display_name": "Dash Items + Chozo"
+    },
+    "With_Dash_Items_And_Chozo_And_Consumables": {
+      "display_name": "Dash Items + Chozo + Ammo & Tanks"
+    },
+    "Standard_Bosses_Off": {
+      "display_name": "[Bosses Off] Standard"
+    },
+    "Standard_With_Consumables_Bosses_Off": {
+      "display_name": "[Bosses Off] Standard + Ammo & Tanks"
     },
     "Chozo_Bosses_Off": {
-      "display_name": "Chozo (Bosses Off by Default)"
+      "display_name": "[Bosses Off] Chozo"
+    },
+    "Chozo_With_Consumables_Bosses_Off": {
+      "display_name": "[Bosses Off] Chozo + Ammo & Tanks"
+    },
+    "With_Dash_Items_Bosses_Off": {
+      "display_name": "[Bosses Off] Dash Items"
+    },
+    "With_Dash_Items_And_Consumables_Bosses_Off": {
+      "display_name": "[Bosses Off] Dash Items + Ammo & Tanks"
+    },
+
+    "With_Dash_Items_And_Chozo_Bosses_Off": {
+      "display_name": "[Bosses Off] Dash Items + Chozo"
+    },
+    "With_Dash_Items_And_Chozo_And_Consumables_Bosses_Off": {
+      "display_name": "[Bosses Off] Dash Items + Chozo + Ammo & Tanks"
     }
   }
 }

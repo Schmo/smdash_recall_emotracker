@@ -1,24 +1,10 @@
 [
   {
-    "name": "Charge Upgrades",
-    "type": "consumable",
-    "img": "images/charge.png",
-    "max_quantity": 4,
-    "increment": 1,
-    "codes": "chargeupgrade,charge"
-  },
-  {
-    "name": "Charge Upgrade (capturable)",
-    "type": "toggle",
-    "img": "images/charge.png",
-    "codes": "chargeupgrade_icon"
-  },
-  {
     "name": "Charge Beam",
     "type": "toggle",
     "loop": "true",
     "img": "images/charge.png",
-    "codes": "chargebeam"
+    "codes": "charge"
   },
   {
     "name": "Wave Beam",
@@ -49,25 +35,11 @@
     "codes": "spazer"
   },
   {
-    "name": "Heat Shield",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/heatshield.png",
-    "codes": "heatshield"
-  },
-  {
     "name": "Varia Suit",
     "type": "toggle",
     "loop": "true",
     "img": "images/varia.png",
     "codes": "varia"
-  },
-  {
-    "name": "Pressure Valve",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/pressurevalve.png",
-    "codes": "pressurevalve"
   },
   {
     "name": "Gravity Suit",
@@ -110,13 +82,6 @@
     "loop": "true",
     "img": "images/space.png",
     "codes": "space"
-  },
-  {
-    "name": "Double Jump",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/doublejump.png",
-    "codes": "doublejump"
   },
   {
     "name": "Speed Booster",
@@ -178,7 +143,7 @@
     "name": "Etanks",
     "type": "consumable",
     "img": "images/etank.png",
-    "max_quantity": 3,
+    "max_quantity": 14,
     "codes": "etank,alltanks"
   },
   {
@@ -191,7 +156,7 @@
     "name": "Reserve Tanks",
     "type": "consumable",
     "img": "images/reservetank.png",
-    "max_quantity": 1,
+    "max_quantity": 4,
     "codes": "reservetank,alltanks"
   },
   {
@@ -204,8 +169,8 @@
     "name": "Missile Capacity",
     "type": "consumable",
     "img": "images/missile.png",
-    "max_quantity": 2,
-    "increment": 1,
+    "max_quantity": 255,
+    "increment": 5,
     "codes": "missile"
   },
   {
@@ -218,8 +183,8 @@
     "name": "Super Missile Capacity",
     "type": "consumable",
     "img": "images/super.png",
-    "max_quantity": 2,
-    "increment": 1,
+    "max_quantity": 100,
+    "increment": 5,
     "codes": "supermissile,super"
   },
   {
@@ -232,8 +197,8 @@
     "name": "Power Bomb Capacity",
     "type": "consumable",
     "img": "images/powerbomb.png",
-    "max_quantity": 1,
-    "increment": 1,
+    "max_quantity": 100,
+    "increment": 5,
     "codes": "powerbomb,pb"
   },
   {
@@ -241,73 +206,5 @@
     "type": "toggle",
     "img": "images/powerbomb.png",
     "codes": "powerbomb_icon"
-  },
-  {
-    "name": "Etanks",
-    "type": "consumable",
-    "img": "images/etank_chozo.png",
-    "max_quantity": 3,
-    "codes": "etank_chozo,alltanks"
-  },
-  {
-    "name": "Etank (capturable)",
-    "type": "toggle",
-    "img": "images/etank_chozo.png",
-    "codes": "etank_icon_chozo"
-  },
-  {
-    "name": "Reserve Tanks",
-    "type": "consumable",
-    "img": "images/reservetank_chozo.png",
-    "max_quantity": 1,
-    "codes": "reservetank_chozo,alltanks"
-  },
-  {
-    "name": "Reserve Tank (capturable)",
-    "type": "toggle",
-    "img": "images/reservetank_chozo.png",
-    "codes": "reservetank_icon_chozo"
-  },
-  {
-    "name": "Missile Capacity",
-    "type": "consumable",
-    "img": "images/missile_chozo.png",
-    "max_quantity": 2,
-    "increment": 1,
-    "codes": "missile_chozo"
-  },
-  {
-    "name": "Missile (capturable)",
-    "type": "toggle",
-    "img": "images/missile_chozo.png",
-    "codes": "missile_icon_chozo"
-  },
-  {
-    "name": "Super Missile Capacity",
-    "type": "consumable",
-    "img": "images/super_chozo.png",
-    "max_quantity": 2,
-    "increment": 1,
-    "codes": "supermissile_chozo,super_chozo"
-  },
-  {
-    "name": "Super Missile (capturable)",
-    "type": "toggle",
-    "img": "images/super_chozo.png",
-    "codes": "supermissile_icon_chozo"
-  },
-  {
-    "name": "Power Bomb Capacity",
-    "type": "consumable",
-    "img": "images/powerbomb_chozo.png",
-    "max_quantity": 1,
-    "increment": 1,
-    "codes": "powerbomb_chozo,pb_chozo"
-  },
-  {
-    "name": "Power Bomb (capturable)",
-    "type": "toggle",
-    "img": "images/powerbomb_chozo.png",
-    "codes": "powerbomb_icon_chozo"
   }
 ]

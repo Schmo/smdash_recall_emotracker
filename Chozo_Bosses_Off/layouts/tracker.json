@@ -8,8 +8,8 @@
       [ "kraid", "chargebeam", "varia", "morph", "hijump" ],
       [ "phantoon", "ice", "gravity", "bomb", "space" ],
       [ "draygon", "wave", "screw", "spring", "speed" ],
-      [ "ridley", "spazer", "powerbomb_icon", "supermissile", "missile" ],
-      [ "xray", "plasma", "grapple", "etank", "reservetank" ]
+      [ "ridley", "spazer", "grapple", "etank_chozo", "reservetank_chozo" ],
+      [ "xray", "plasma", "missile_chozo", "supermissile_chozo", "powerbomb_icon_chozo"]
     ]
   },
   "tracker_default": {
