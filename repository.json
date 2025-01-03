@@ -14,7 +14,7 @@
       "name": "Super Metroid Randomizer - Items Only",
       "author": "PapaSchmo",
       "game_name": "Super Metroid",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "flags": [ "autotracker" ],
       "uid": "sm_itemsonly_papaschmo",
       "link": "https://github.com/Schmo/smdash_recall_emotracker/raw/Package/SuperMetroidRandomizer_ItemsOnly_Tracker.zip",
@@ -24,25 +24,58 @@
           "flags": [ "autotracker" ]
         },
         {
-          "name": "DASH Recall",
+          "name": "Standard + Ammo & Tanks",
           "flags": [ "autotracker" ]
         },
         {
           "name": "Chozo"
         },
         {
-          "name": "Standard (Bosses Off by Default)",
+          "name": "Chozo + Ammo & Tanks"
+        },
+        {
+          "name": "Dash Items",
           "flags": [ "autotracker" ]
         },
         {
-          "name": "DASH Recall (Bosses Off by Default)",
+          "name": "Dash Items + Ammo & Tanks",
           "flags": [ "autotracker" ]
         },
         {
-          "name": "Chozo (Bosses Off by Default)"
+          "name": "Dash Items + Chozo"
+        },
+        {
+          "name": "Dash Items + Chozo + Ammo & Tanks"
+        },
+        {
+          "name": "[Bosses Off] Standard",
+          "flags": [ "autotracker" ]
+        },
+        {
+          "name": "[Bosses Off] Standard + Ammo & Tanks",
+          "flags": [ "autotracker" ]
+        },
+        {
+          "name": "[Bosses Off] Chozo"
+        },
+        {
+          "name": "[Bosses Off] Chozo + Ammo & Tanks"
+        },
+        {
+          "name": "[Bosses Off] Dash Items",
+          "flags": [ "autotracker" ]
+        },
+        {
+          "name": "[Bosses Off] Dash Items + Ammo & Tanks",
+          "flags": [ "autotracker" ]
+        },
+        {
+          "name": "[Bosses Off] Dash Items + Chozo"
+        },
+        {
+          "name": "[Bosses Off] Dash Items + Chozo + Ammo & Tanks"
         }
       ]
     }
   ]
 }
-
